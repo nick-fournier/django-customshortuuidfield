@@ -12,18 +12,18 @@ class CustomShortUUIDField(CharField):
     UUIDs are expected to be unique we enforce this with a DB constraint.
     """
 
-    def __init__(self, auto=True, *args, **kwargs):
+    def __init__(self, auto=True, prefix='', suffix='', *args, **kwargs):
         self.auto = auto
         # We store UUIDs in base57 format, which is fixed at 22 characters.
-        if kwargs['prefix']:
-            self.prefix = kwargs['prefix']
-        else:
-            self.prefix = ''
+#         if kwargs['prefix']:
+#             self.prefix = kwargs['prefix']
+#         else:
+#             self.prefix = ''
             
-        if kwargs['suffix']:            
-            self.suffix = kwargs['suffix']
-        else:
-            self.suffix = ''
+#         if kwargs['suffix']:            
+#             self.suffix = kwargs['suffix']
+#         else:
+#             self.suffix = ''
         
         kwargs['max_length'] = 22 + len(self.prefix) + len(self.suffix)
         if auto:
@@ -53,6 +53,6 @@ class CustomShortUUIDField(CharField):
 
 try:
     from south.modelsinspector import add_introspection_rules
-    add_introspection_rules([], [r"^shortuuidfield\.fields\.CustomShortUUIDField"])
+    add_introspection_rules([], [r"^customshortuuidfield\.fields\.CustomShortUUIDField"])
 except ImportError:
     pass
