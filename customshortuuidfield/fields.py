@@ -14,11 +14,11 @@ class CustomShortUUIDField(CharField):
 
     def __init__(self, auto=True, prefix='', suffix='', *args, **kwargs):
         self.auto = auto
-        # We store UUIDs in base57 format, which is fixed at 22 characters.
         self.prefix = prefix
         self.suffix = suffix
         
-        kwargs['max_length'] = 22 + len(prefix) + len(suffix)
+        # We store UUIDs in base57 format, which is fixed at 22 characters.        
+        kwargs['max_length'] = 22 + len(self.prefix) + len(self.suffix)
         if auto:
             # Do not let the user edit UUIDs if they are auto-assigned.
             kwargs['editable'] = False
