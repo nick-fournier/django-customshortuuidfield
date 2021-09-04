@@ -20,7 +20,7 @@ class CustomShortUUIDField(CharField):
         else:
             self.prefix = ''
             
-        if kwargs['suffix']):            
+        if kwargs['suffix']:            
             self.suffix = kwargs['suffix']
         else:
             self.suffix = ''
