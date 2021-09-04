@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='django-customshortuuidfield',
     version='0.0.1',
-    author='Nick Fournier via Ben Roberts',
+    author='Ben Roberts',
     author_email='roberts81@gmail.com',
     description='Short UUIDField for Django.  Good for use in urls & file names.  (Base 57, 22 characters)',
     url='https://github.com/nebstrebor/django-shortuuidfield',
