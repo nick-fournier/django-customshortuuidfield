@@ -1,10 +1,8 @@
 django-shortuuidfield
 ----------------
-Modifies ShortUUIDField for Django. You can pass a prefix or suffix which will be appended to the string.
+Modifies ShortUUIDField to pass a prefix or suffix which will be appended to the string. For Django models which uses the base-57 "Short UUID" package at https://github.com/stochastic-technologies/shortuuid/ .
 
-Provides a ShortUUIDField for your Django models which uses the base-57 "Short UUID" package at https://github.com/stochastic-technologies/shortuuid/ .
-
-Originally, a fork from David Cramer's excellent django-uuidfield, but not much is left of that besides a bit of structure.
+A form from  benrobster/django-shortuuidfield which was a fork from David Cramer's excellent django-uuidfield.
 
 Installation
 ============
