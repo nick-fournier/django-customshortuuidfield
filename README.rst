@@ -11,7 +11,7 @@ Installation
 
 Install it with pip (or easy_install)::
 
-	pip install django-shortuuidfield
+	pip install django-customshortuuidfield
 
 Usage
 =====
