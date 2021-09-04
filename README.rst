@@ -21,7 +21,7 @@ First you'll need to attach a ShortUUIDField to your class. This acts as a char(
 	from shortuuidfield import ShortUUIDField
 	
 	class MyModel(models.Model):
-	    uuid = ShortUUIDField()
+	    uuid = CustomShortUUIDField(prefix="cust_", suffix="_sys")
 
 Enjoy!
 
