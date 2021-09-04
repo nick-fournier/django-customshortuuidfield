@@ -12,7 +12,7 @@ class CustomShortUUIDField(CharField):
     UUIDs are expected to be unique we enforce this with a DB constraint.
     """
 
-    def __init__(self, auto=True, prefix='pre_', suffix='', *args, **kwargs):
+    def __init__(self, auto=True, prefix='', suffix='', *args, **kwargs):
         self.auto = auto
         self.prefix = prefix
         self.suffix = suffix
