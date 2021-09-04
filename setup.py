@@ -5,8 +5,8 @@ setup(
     version='0.0.1',
     author='Ben Roberts',
     author_email='roberts81@gmail.com',
-    description='Short UUIDField for Django.  Good for use in urls & file names.  (Base 57, 22 characters)',
-    url='https://github.com/nebstrebor/django-shortuuidfield',
+    description='Custom Short UUIDField for Django.  Good for use in urls & file names.  (Base 57, 22 characters)',
+    url='https://github.com/nick-fournier/django-customshortuuidfield',
     zip_safe=False,
     install_requires=[
         'django',
