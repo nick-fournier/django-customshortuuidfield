@@ -1,5 +1,6 @@
 django-shortuuidfield
 ----------------
+Modifies ShortUUIDField for Django. You can pass a prefix or suffix which will be appended to the string.
 
 Provides a ShortUUIDField for your Django models which uses the base-57 "Short UUID" package at https://github.com/stochastic-technologies/shortuuid/ .
 
