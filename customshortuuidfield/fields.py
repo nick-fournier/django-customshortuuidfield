@@ -12,13 +12,13 @@ class CustomShortUUIDField(CharField):
     UUIDs are expected to be unique we enforce this with a DB constraint.
     """
 
-    def __init__(self, auto=True, prefix='pre_', suffix='', *args, **kwargs):
+    def __init__(self, auto=True, prefix='', suffix='', *args, **kwargs):
         self.auto = auto
-        self.prefix = prefix
-        self.suffix = suffix
+        self.prefix = kwargs['prefix'] = prefix
+        self.suffix = kwargs['suffix'] = suffix
         
         # We store UUIDs in base57 format, which is fixed at 22 characters.        
-        kwargs['max_length'] = 22 + len(self.prefix) + len(self.suffix)
+        kwargs['max_length'] = 22 + len(prefix) + len(suffix)
         if auto:
             # Do not let the user edit UUIDs if they are auto-assigned.
             kwargs['editable'] = False
