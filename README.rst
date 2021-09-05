@@ -9,7 +9,7 @@ Installation
 
 Install it with pip (or easy_install)::
 
-	pip install django-customshortuuidfield
+	pip install git+https://github.com/nick-fournier/django-customshortuuidfield
 
 Usage
 =====
