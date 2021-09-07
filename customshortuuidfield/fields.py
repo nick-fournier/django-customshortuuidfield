@@ -22,10 +22,14 @@ class CustomShortUUIDField(CharField):
         if kwargs.get("prefix"):
             self.prefix = kwargs.pop("prefix")
             kwargs['max_length'] += len(self.prefix)
+        else:
+            self.prefix = ''
             
         if kwargs.get("suffix"):
             self.suffix = kwargs.pop("suffix")
             kwargs['max_length'] += len(self.suffix)
+        else:
+            self.suffix = ''
 
         if auto:
             # Do not let the user edit UUIDs if they are auto-assigned.
